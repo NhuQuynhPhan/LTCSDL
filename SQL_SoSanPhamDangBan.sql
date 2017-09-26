@@ -1,0 +1,11 @@
+USE ONLINE_SHOP
+GO
+IF OBJECT_ID('uspDanhMucChuaCoSP','P') IS NOT NULL
+	DROP PROC uspDanhMucChuaCoSP
+GO
+CREATE PROC uspDanhMucChuaCoSP
+AS
+	SELECT * FROM DANHMUC WHERE SoSanPhamDangBan = 0
+GO
+EXEC uspDanhMucChuaCoSP
+GO
